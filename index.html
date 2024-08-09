@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Plan Pricing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Health Insurance Premium prediction</h1>
+        <form id="premiumForm">
+            <h2 id="languageLabel">Select a language:</h2>
+            <div id="languageSelection">
+                <input type="radio" id="telugu" name="language" value="telugu" required>
+                <label for="telugu" class="language-option">Telugu</label>
+                <input type="radio" id="hindi" name="language" value="hindi" required>
+                <label for="hindi" class="language-option">Hindi</label>
+                <input type="radio" id="english" name="language" value="english" required>
+                <label for="english" class="language-option">English</label>
+            </div>
+
+            <label for="age" id="ageLabel" class="hover-speak">Age:</label>
+            <span class="btn" onclick='speakText("Age:")'>🔉</span>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender" id="genderLabel" class="hover-speak">Gender:</label>
+            <span class="btn" onclick='speakText("Gender:")'>🔉</span>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="bmi" id="bmiLabel" class="hover-speak">BMI:</label>
+            <span class="btn" onclick='speakText("BMI:")'>🔉</span>
+            <input type="number" step="0.01" id="bmi" name="bmi" required>
+
+            <label for="children" id="childrenLabel" class="hover-speak">Number of Children:</label>
+            <span class="btn" onclick='speakText("Number of Children:")'>🔉</span>
+            <input type="number" id="children" name="children" required>
+
+            <label for="smoker" id="smokerLabel" class="hover-speak">Smoker:</label>
+            <span class="btn" onclick='speakText("Smoker:")'>🔉</span>
+            <select id="smoker" name="smoker" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="alcohol" id="alcoholLabel" class="hover-speak">Alcohol Consumption:</label>
+            <span class="btn" onclick='speakText("Alcohol Consumption:")'>🔉</span>
+            <select id="alcohol" name="alcohol" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="region" id="regionLabel" class="hover-speak">Region:</label>
+            <span class="btn" onclick='speakText("Region:")'>🔉</span>
+            <select id="region" name="region" required>
+                <option value="east">East</option>
+                <option value="west">West</option>
+                <option value="north">North</option>
+                <option value="south">South</option>
+            </select>
+
+            <button type="button" id="predictMonthlyButton">Predict Monthly Premium</button>
+            <button type="button" id="predictAnnualButton">Predict Annual Premium</button>
+        </form>
+        <p id="result"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
